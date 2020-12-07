@@ -6,7 +6,7 @@ const { Footer } = Layout;
 export default function MainFooter() {
   return (
     <Footer style={{ textAlign: "center" }}>
-      Worth Internet Systems ©2020
+      {process.env.REACT_APP_COMPANY} ©2020
     </Footer>
   );
 }

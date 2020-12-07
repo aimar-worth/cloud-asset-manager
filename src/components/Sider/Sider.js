@@ -28,8 +28,8 @@ export default function Sidebar() {
         }}
       >
         <img
-          src="https://images.ctfassets.net/bwx98rfv5w3w/3Xzy1AQAXmCm0iK62iAiOm/7bb9e0d9cd0020949d4554f4c66ed785/worth-logo-svg.svg"
-          alt="worth internet systems"
+          src={process.env.REACT_APP_LOGO}
+          alt={process.env.REACT_APP_COMPANY}
           style={{ width: "50%" }}
         />
       </div>
