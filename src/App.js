@@ -8,9 +8,6 @@ import LoginRedirect from "./pages/LoginRedirect";
 
 import AuthLayout from "./components/Layouts/Auth";
 import DashLayout from "./components/Layouts/Dashboard";
-import Loader from "./components/Loader/Loader";
-
-// import GoogleAuthCallback from "./utils/GoogleAuthCallback.js";
 
 import "./App.css";
 
@@ -18,12 +15,6 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <RouteWrapper
-          exact
-          path="/loader"
-          component={Loader}
-          layout={AuthLayout}
-        />
         <RouteWrapper
           exact
           path="/connect/google/redirect"

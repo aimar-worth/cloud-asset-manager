@@ -1,7 +1,8 @@
 import React from "react";
 // import { useHistory } from "react-router-dom";
 
-import { Card, Form, Button } from "antd";
+import { Form, Button } from "antd";
+import { LoginWrapper } from "./LoginStyles";
 // import { Link } from "react-router-dom";
 // import { UserContext } from "../context/UserContext";
 
@@ -22,7 +23,7 @@ export default function Login() {
   // }
 
   return (
-    <Card>
+    <LoginWrapper>
       <img
         src={process.env.REACT_APP_LOGO}
         alt={process.env.REACT_APP_COMPANY}
@@ -45,6 +46,6 @@ export default function Login() {
           </a>
         </Form.Item>
       </Form>
-    </Card>
+    </LoginWrapper>
   );
 }

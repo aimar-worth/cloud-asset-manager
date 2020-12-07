@@ -1,12 +1,12 @@
 import React from "react";
-import { Breadcrumb } from "antd";
+import { Breadcrumb as BreCum } from "antd";
 
-export default function BreadcrumbComp({ crums }) {
+export default function Breadcrumb({ crums }) {
   return (
-    <Breadcrumb style={{ margin: "16px 0" }}>
+    <BreCum style={{ margin: "16px 0" }}>
       {crums.map((crum, index) => (
-        <Breadcrumb.Item key={index}>{crum.title}</Breadcrumb.Item>
+        <BreCum.Item key={index}>{crum.title}</BreCum.Item>
       ))}
-    </Breadcrumb>
+    </BreCum>
   );
 }
