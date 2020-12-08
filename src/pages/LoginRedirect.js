@@ -20,7 +20,10 @@ const LoginRedirect = (props) => {
       .then((res) => res.json())
       .then((res) => {
         setUser(res);
-        localStorage.setItem("user", JSON.stringify(res));
+        localStorage.setItem(
+          "user",
+          JSON.stringify({ jwt: res.jwt, username: res.user.username })
+        );
         setTimeout(() => history.push("/"), 2000);
       })
       .catch((err) => {

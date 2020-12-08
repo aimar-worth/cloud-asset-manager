@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import Dashboard from "./pages/Dashboard";
@@ -10,15 +10,15 @@ import LoginRedirect from "./pages/LoginRedirect";
 import AuthLayout from "./components/Layouts/Auth";
 import DashLayout from "./components/Layouts/Dashboard";
 
+import "./App.css";
 import { UserContext } from "./context/UserContext";
 
-import "./App.css";
-
-function App() {
+function App({ history }) {
   const { setUser } = useContext(UserContext);
+
   useEffect(() => {
-    const getUser = localStorage.getItem("user");
-    setUser(JSON.parse(getUser));
+    const data = localStorage.getItem("user");
+    setUser(JSON.parse(data));
   }, [setUser]);
 
   return (

@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import React from "react";
 import Breadcrumbs from "../components/Breadcrumb/Breadcrumb";
+// import { useCheckLoggedIn } from "../utils/useCheckLoggedIn";
 
 import {
   OverviewContainer,
@@ -10,13 +10,6 @@ import {
 } from "./DashboardStyles";
 
 export default function Dashboard() {
-  const history = useHistory();
-  const [isLogged] = useState(!!localStorage.getItem("user"));
-
-  if (!isLogged) {
-    history.push("/login");
-  }
-
   const crums = [
     {
       title: "Dashboard",
