@@ -1,3 +1,4 @@
+import React, { useState, useEffect, useContext } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import Dashboard from "./pages/Dashboard";
@@ -9,9 +10,17 @@ import LoginRedirect from "./pages/LoginRedirect";
 import AuthLayout from "./components/Layouts/Auth";
 import DashLayout from "./components/Layouts/Dashboard";
 
+import { UserContext } from "./context/UserContext";
+
 import "./App.css";
 
 function App() {
+  const { setUser } = useContext(UserContext);
+  useEffect(() => {
+    const getUser = localStorage.getItem("user");
+    setUser(JSON.parse(getUser));
+  }, [setUser]);
+
   return (
     <BrowserRouter>
       <Switch>
@@ -45,12 +54,6 @@ function App() {
           component={Login}
           layout={AuthLayout}
         />
-
-        {/* <Route path="/auth/callback/google">
-          <GoogleAuthCallback />
-        </Route> */}
-        {/* <Route path="/" exact component={RequestAsset} />
-        <Route path="/login" exact component={Login} /> */}
       </Switch>
     </BrowserRouter>
   );

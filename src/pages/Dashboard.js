@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import { Row, Col } from "antd";
 import { useHistory } from "react-router-dom";
 import Breadcrumbs from "../components/Breadcrumb/Breadcrumb";
 
@@ -12,7 +11,7 @@ import {
 
 export default function Dashboard() {
   const history = useHistory();
-  const [isLogged] = useState(!!localStorage.getItem("jwt"));
+  const [isLogged] = useState(!!localStorage.getItem("user"));
 
   if (!isLogged) {
     history.push("/login");
