@@ -4,7 +4,7 @@ import { UserContext } from "../context/UserContext";
 import Spinner from "../components/Spinner/Spinner";
 
 const LoginRedirect = (props) => {
-  const { user, setUser } = useContext(UserContext);
+  const { setUser } = useContext(UserContext);
   const location = useLocation();
   const history = useHistory();
   useEffect(() => {
@@ -21,7 +21,6 @@ const LoginRedirect = (props) => {
       .then((res) => {
         setUser(res);
         localStorage.setItem("user", JSON.stringify(res));
-        // localStorage.setItem("username", res.user.username);
         setTimeout(() => history.push("/"), 2000);
       })
       .catch((err) => {
