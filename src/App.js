@@ -14,12 +14,13 @@ import "./App.css"
 import { UserContext } from "./context/UserContext"
 
 function App() {
-  const { setUser } = useContext(UserContext)
+  // const { setUser } = useContext(UserContext)
 
-  useEffect(() => {
-    const data = localStorage.getItem("user")
-    setUser(JSON.parse(data))
-  }, [setUser])
+  // useEffect(() => {
+  //   console.log("<APP> EFFECT")
+  //   const data = localStorage.getItem("user")
+  //   setUser(JSON.parse(data))
+  // })
 
   return (
     <BrowserRouter>
