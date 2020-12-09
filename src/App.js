@@ -1,25 +1,25 @@
-import React, { useContext, useEffect } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import React, { useContext, useEffect } from "react"
+import { BrowserRouter, Switch, Route } from "react-router-dom"
 
-import Dashboard from "./pages/Dashboard";
-import RequestAsset from "./pages/RequestAsset";
-import MyAssets from "./pages/MyAssets";
-import Login from "./pages/Login";
-import LoginRedirect from "./pages/LoginRedirect";
+import Dashboard from "./pages/Dashboard"
+import RequestAsset from "./pages/RequestAsset"
+import MyAssets from "./pages/MyAssets"
+import Login from "./pages/Login"
+import LoginRedirect from "./pages/LoginRedirect"
 
-import AuthLayout from "./components/Layouts/Auth";
-import DashLayout from "./components/Layouts/Dashboard";
+import AuthLayout from "./components/Layouts/Auth"
+import DashLayout from "./components/Layouts/Dashboard"
 
-import "./App.css";
-import { UserContext } from "./context/UserContext";
+import "./App.css"
+import { UserContext } from "./context/UserContext"
 
-function App({ history }) {
-  const { setUser } = useContext(UserContext);
+function App() {
+  const { setUser } = useContext(UserContext)
 
   useEffect(() => {
-    const data = localStorage.getItem("user");
-    setUser(JSON.parse(data));
-  }, [setUser]);
+    const data = localStorage.getItem("user")
+    setUser(JSON.parse(data))
+  }, [setUser])
 
   return (
     <BrowserRouter>
@@ -56,7 +56,7 @@ function App({ history }) {
         />
       </Switch>
     </BrowserRouter>
-  );
+  )
 }
 
 function RouteWrapper({ component: Component, layout: Layout, ...rest }) {
@@ -69,7 +69,7 @@ function RouteWrapper({ component: Component, layout: Layout, ...rest }) {
         </Layout>
       )}
     />
-  );
+  )
 }
 
-export default App;
+export default App

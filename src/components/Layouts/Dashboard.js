@@ -1,12 +1,12 @@
-import React from "react";
-import { Layout } from "antd";
+import React from "react"
+import { Layout } from "antd"
 
-import Sider from "../Sider/Sider";
-import TopNav from "../TopNav/TopNav";
-import Footer from "../Footer/Footer";
+import Sider from "../Sider/Sider"
+import TopNav from "../TopNav/TopNav"
+import Footer from "../Footer/Footer"
 // import Breadcrumb from "../Breadcrumb/Breadcrumb";
 
-const { Content } = Layout;
+const { Content } = Layout
 
 export default function Dashboard({ children }) {
   return (
@@ -20,5 +20,5 @@ export default function Dashboard({ children }) {
         </Content>
       </Layout>
     </Layout>
-  );
+  )
 }

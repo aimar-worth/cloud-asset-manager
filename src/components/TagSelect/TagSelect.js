@@ -1,11 +1,11 @@
-import React from "react";
-import { Form, Select } from "antd";
+import React from "react"
+import { Form, Select } from "antd"
 
 export default function TagSelect({ label, tags }) {
-  const children = [];
+  const children = []
   tags.map((tag) =>
     children.push(<Select.Option key={tag.id}>{tag.title}</Select.Option>)
-  );
+  )
 
   return (
     <Form.Item label={label}>
@@ -13,5 +13,5 @@ export default function TagSelect({ label, tags }) {
         {children}
       </Select>
     </Form.Item>
-  );
+  )
 }

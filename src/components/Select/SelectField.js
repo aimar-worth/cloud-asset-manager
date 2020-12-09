@@ -1,5 +1,5 @@
-import React from "react";
-import { Form, Select } from "antd";
+import React from "react"
+import { Form, Select } from "antd"
 
 function SelectField({ label, options }) {
   return (
@@ -12,7 +12,7 @@ function SelectField({ label, options }) {
         ))}
       </Select>
     </Form.Item>
-  );
+  )
 }
 
-export default SelectField;
+export default SelectField

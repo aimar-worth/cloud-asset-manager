@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import { Layout } from "antd";
+import React, { useState } from "react"
+import { Layout } from "antd"
 
-import Navigation from "../Navigation/Navigation";
+import Navigation from "../Navigation/Navigation"
 
 export default function Sider() {
-  const [collapsed, setcollapsed] = useState(false);
+  const [collapsed, setcollapsed] = useState(false)
   const onCollapse = () => {
-    setcollapsed(!collapsed);
-  };
+    setcollapsed(!collapsed)
+  }
 
   return (
     <Layout.Sider
@@ -33,5 +33,5 @@ export default function Sider() {
       </div>
       <Navigation />
     </Layout.Sider>
-  );
+  )
 }

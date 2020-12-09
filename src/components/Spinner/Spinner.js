@@ -1,7 +1,7 @@
-import React from "react";
-import Loader from "react-loader-spinner";
+import React from "react"
+import Loader from "react-loader-spinner"
 
-import { LoaderContainer } from "./styles";
+import { LoaderContainer } from "./styles"
 
 export default function Spinner() {
   return (
@@ -12,5 +12,5 @@ export default function Spinner() {
       />
       <Loader type="Bars" color="#e6037e" height={50} width={50} />
     </LoaderContainer>
-  );
+  )
 }

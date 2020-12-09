@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export const LoaderContainer = styled.div`
   display: flex;
@@ -10,4 +10,6 @@ export const LoaderContainer = styled.div`
     width: 150px;
     padding: 24px;
   }
-`;
+`
+
+export const dummy = styled.div``

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export const OverviewContainer = styled.div`
   display: grid;
@@ -6,7 +6,7 @@ export const OverviewContainer = styled.div`
   grid-auto-rows: 94px;
   grid-gap: 24px;
   margin-bottom: 24px;
-`;
+`
 
 export const OverviewCard = styled.div`
   display: flex;
@@ -14,7 +14,7 @@ export const OverviewCard = styled.div`
   justify-content: space-between;
   padding: 20px;
   background-color: #d3d3;
-`;
+`
 
 export const CardContainer = styled.div`
   column-count: 1;
@@ -24,7 +24,7 @@ export const CardContainer = styled.div`
   @media (min-width: 768px) {
     column-count: 2;
   }
-`;
+`
 
 export const Card = styled.div`
   display: flex;
@@ -48,4 +48,4 @@ export const Card = styled.div`
   &:nth-child(3) {
     height: 265px;
   }
-`;
+`

@@ -1,28 +1,29 @@
-import React from "react";
-import { useHistory } from "react-router-dom";
-import Breadcrumbs from "../components/Breadcrumb/Breadcrumb";
-import useCheckLoggedIn from "../utils/useCheckLoggedIn";
+import React from "react"
+import { useHistory } from "react-router-dom"
+import Breadcrumbs from "../components/Breadcrumb/Breadcrumb"
+import useCheckLoggedIn from "../utils/useCheckLoggedIn"
 
 import {
   OverviewContainer,
   OverviewCard,
   CardContainer,
   Card,
-} from "./DashboardStyles";
+} from "./DashboardStyles"
 
 export default function Dashboard() {
-  const history = useHistory();
-  const isLoggedIn = useCheckLoggedIn();
+  const history = useHistory()
+  const isLoggedIn = useCheckLoggedIn()
 
   if (!isLoggedIn) {
-    history.push("/login");
+    history.push("/login")
   }
 
   const crums = [
     {
+      id: 1,
       title: "Dashboard",
     },
-  ];
+  ]
 
   return (
     <div>
@@ -40,5 +41,5 @@ export default function Dashboard() {
       </CardContainer>
       {/* </div> */}
     </div>
-  );
+  )
 }

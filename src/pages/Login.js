@@ -1,8 +1,8 @@
-import React from "react";
+import React from "react"
 // import { useHistory } from "react-router-dom";
 
-import { Form, Button } from "antd";
-import { LoginWrapper } from "./LoginStyles";
+import { Form, Button } from "antd"
+import { LoginWrapper } from "./LoginStyles"
 
 export default function Login() {
   return (
@@ -30,5 +30,5 @@ export default function Login() {
         </Form.Item>
       </Form>
     </LoginWrapper>
-  );
+  )
 }

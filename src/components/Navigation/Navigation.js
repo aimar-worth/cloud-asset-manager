@@ -1,11 +1,11 @@
-import React from "react";
-import { Menu } from "antd";
+import React from "react"
+import { Menu } from "antd"
 import {
   BarsOutlined,
   BookOutlined,
   DashboardOutlined,
-} from "@ant-design/icons";
-import { NavLink } from "react-router-dom";
+} from "@ant-design/icons"
+import { NavLink } from "react-router-dom"
 
 // const { SubMenu } = Menu;
 
@@ -22,5 +22,5 @@ export default function Navigation() {
         <NavLink to="/myassets">My Assets</NavLink>
       </Menu.Item>
     </Menu>
-  );
+  )
 }

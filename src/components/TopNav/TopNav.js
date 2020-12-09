@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
-import { Layout } from "antd";
-import { UserContext } from "../../context/UserContext";
+import React, { useContext } from "react"
+import { Layout } from "antd"
+import { UserContext } from "../../context/UserContext"
 
-const { Header } = Layout;
+const { Header } = Layout
 
 export default function TopNav() {
-  const { user } = useContext(UserContext);
+  const { user } = useContext(UserContext)
   return (
     <Header className="site-layout-background" style={{ padding: 0 }}>
       <div
@@ -22,5 +22,5 @@ export default function TopNav() {
         {user ? <p>Hello, {user.username}</p> : null}
       </div>
     </Header>
-  );
+  )
 }
