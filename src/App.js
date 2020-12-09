@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react"
+import React from "react"
 import { BrowserRouter, Switch, Route } from "react-router-dom"
 
 import Dashboard from "./pages/Dashboard"
@@ -11,7 +11,6 @@ import AuthLayout from "./components/Layouts/Auth"
 import DashLayout from "./components/Layouts/Dashboard"
 
 import "./App.css"
-import { UserContext } from "./context/UserContext"
 
 function App() {
   // const { setUser } = useContext(UserContext)
