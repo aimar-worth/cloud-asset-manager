@@ -1,7 +1,7 @@
-export const fetchData = async (user, endpoint) => {
+export const fetchData = async (jwt, endpoint) => {
   const res = await fetch(`${process.env.REACT_APP_API_URL}/${endpoint}`, {
     headers: {
-      Authorization: `Bearer ${user.jwt}`,
+      Authorization: `Bearer ${jwt}`,
     },
   });
   const data = await res.json();

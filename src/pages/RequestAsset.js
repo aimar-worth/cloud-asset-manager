@@ -7,44 +7,40 @@ import Breadcrumbs from "../components/Breadcrumb/Breadcrumb";
 import TagSelect from "../components/TagSelect/TagSelect";
 import Select from "../components/Select/SelectField";
 import Input from "../components/Input/InputField";
-import { UserContext } from "../context/UserContext";
 import { fetchData } from "../utils/fetchData";
 
 export default function RequestAsset() {
   const history = useHistory();
-  const isLoggedIn = useCheckLoggedIn();
-
-  if (!isLoggedIn) {
-    history.push("/login");
-  }
-
-  const user = localStorage.getItem("user");
-
   const [fields, setFields] = useState({
     tags: [],
     types: [],
     clouds: [],
   });
   const [loading, setLoading] = useState(false);
-
-  const populateFields = async (user) => {
-    setLoading(true);
-    const tags = await fetchData(user, "services");
-    const types = await fetchData(user, "assettypes");
-    const clouds = await fetchData(user, "clouds");
-    setFields({ tags, types, clouds });
-    setLoading(false);
-  };
+  const user = localStorage.getItem("user");
 
   useEffect(() => {
     populateFields(JSON.parse(user));
   }, [user]);
+
+  const populateFields = async ({ jwt }) => {
+    setLoading(true);
+    const tags = await fetchData(jwt, "services");
+    const types = await fetchData(jwt, "assettypes");
+    const clouds = await fetchData(jwt, "clouds");
+    setFields({ tags, types, clouds });
+    setLoading(false);
+  };
 
   const crums = [
     {
       title: "Request",
     },
   ];
+
+  if (!user) {
+    history.push("/login");
+  }
 
   return (
     <div>
