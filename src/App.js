@@ -13,14 +13,6 @@ import DashLayout from "./components/Layouts/Dashboard"
 import "./App.css"
 
 function App() {
-  // const { setUser } = useContext(UserContext)
-
-  // useEffect(() => {
-  //   console.log("<APP> EFFECT")
-  //   const data = localStorage.getItem("user")
-  //   setUser(JSON.parse(data))
-  // })
-
   return (
     <BrowserRouter>
       <Switch>
