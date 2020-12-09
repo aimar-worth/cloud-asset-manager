@@ -1,6 +1,7 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import Breadcrumbs from "../components/Breadcrumb/Breadcrumb";
-// import { useCheckLoggedIn } from "../utils/useCheckLoggedIn";
+import useCheckLoggedIn from "../utils/useCheckLoggedIn";
 
 import {
   OverviewContainer,
@@ -10,6 +11,13 @@ import {
 } from "./DashboardStyles";
 
 export default function Dashboard() {
+  const history = useHistory();
+  const isLoggedIn = useCheckLoggedIn();
+
+  if (!isLoggedIn) {
+    history.push("/login");
+  }
+
   const crums = [
     {
       title: "Dashboard",

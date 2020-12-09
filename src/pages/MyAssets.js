@@ -1,7 +1,15 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
+import useCheckLoggedIn from "../utils/useCheckLoggedIn";
 import Breadcrumbs from "../components/Breadcrumb/Breadcrumb";
 
 export default function MyAssets() {
+  const history = useHistory();
+  const isLoggedIn = useCheckLoggedIn();
+
+  if (!isLoggedIn) {
+    history.push("/login");
+  }
   const crums = [
     {
       title: "My Assets",
