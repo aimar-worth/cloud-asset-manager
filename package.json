@@ -21,7 +21,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --silent --env=jsdom --coverage --testResultsProcessor jest-sonar-reporter",
+    "test": "react-scripts test - --coverage --verbose",
+    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
     "eject": "react-scripts eject",
     "lint": "eslint . --fix"
   },
@@ -50,10 +51,5 @@
     "eslint-plugin-prettier": "^3.2.0",
     "jest-sonar-reporter": "^2.0.0",
     "prettier": "^2.2.1"
-  },
-  "jestSonar": {
-    "reportPath": "reports",
-    "reportFile": "test-report.xml",
-    "indent": 4
   }
 }

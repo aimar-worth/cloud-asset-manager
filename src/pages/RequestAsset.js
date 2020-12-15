@@ -38,8 +38,8 @@ export default function RequestAsset() {
           <Select label="Asset Type" type="assettypes" />
           <Select label="Cloud" type="clouds" />
           <Select label="Services" type="services" tags />
-          <Input label="Project name" />
-          <Input label="Description" textarea />
+          <Input label="Project name" id="project_name" />
+          <Input label="Description" id="description" textarea />
           <div
             style={{
               width: "100%",

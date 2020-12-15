@@ -26,7 +26,7 @@ export default function Dashboard() {
   ]
 
   return (
-    <div>
+    <>
       <Breadcrumbs crums={crums} />
       {/* <div style={{ padding: "12px", minHeight: 360 }}> */}
       <OverviewContainer>
@@ -40,6 +40,6 @@ export default function Dashboard() {
         <Card />
       </CardContainer>
       {/* </div> */}
-    </div>
+    </>
   )
 }
